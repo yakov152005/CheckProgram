@@ -2,19 +2,23 @@ import java.util.Scanner;
 
 public class Program {
 	public static void main(String[] args) {
-		Check[] checkArr = new Check[3];
+		Check[] checkArr = new Check[2];
 		Check checkPtr = new Check("1212e", "National", 902, 1025.2f);
 		searchCheck(checkArr,checkPtr);
 	}
 	public static void searchCheck(Check[] checkArr, Check checkPtr){
 		creatCheckArr(checkArr);
+		boolean found = false;
 		for (int i = 0; i < checkArr.length; i++) {
-			if (checkPtr.getChNumber().equals(checkArr[i].getChNumber())){
+			if (checkPtr.getChNumber().equals(checkArr[i].getChNumber())) {
+				found = true;
 				System.out.println(checkArr[i].toString());
-			}else {
-				System.out.println("Check not exist");
 			}
 		}
+			if (!found) {
+				System.out.println("Check not exist");
+			}
+
 	}
 	public static Check[] creatCheckArr (Check[] checkArr){
 		String chNumber, bName;
