@@ -44,5 +44,12 @@ public class Check {
 				"\nBranch number: "  +depNumber +
 				"\nCheck amount: " + aMount;
 	}
+		public void Destroy(){
+		chNumber = "DESTROYED";
+		bName = "DESTROYED";
+		depNumber =0;
+		aMount =0.0f;
+	}
+
 
 }
